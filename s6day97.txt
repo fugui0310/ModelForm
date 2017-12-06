@@ -1,0 +1,158 @@
+s6day97
+
+今日内容：
+	- git
+	- ModelForm
+	- 问题列表
+	
+今日征程：
+	- git
+		init/add/commit/reset/log/status/stash pop/checkout/branch
+		
+		新入职到公司，地址：
+			git clone http:/xxxxx
+			
+			git init 
+			git remote add origin http://xxxxx
+			git pull origin master
+			
+			
+			git init 
+			git remote add origin http://xxxxx
+			git fetch origin master
+			git merge origin/master
+	
+		阶段三：
+			master 
+			
+			dev 
+			
+			review
+			
+			bb
+			
+			sk
+			
+			wh
+			
+			协同开发：
+				- 项目协作者
+				- 组织
+				
+				PS: 创建组织
+			
+			面试题：公司代码review怎么做？谁来做？
+			面试题：每个人都有自己分支
+			
+		阶段四：
+			fork
+			
+			面试题： 通过fork一下
+			
+			
+		注意事项：
+			- .gitignore 文件
+			- 认证
+				SSH:
+					git remote add origin  git@github.com:ugfly1210/git_projects.git
+				Https:
+					https://github.com/ugfly1210/git_projects.git
+					
+	- Model Form
+	
+		应用场景：
+			- ModelForm - 中小型应用程序
+			- Form      - 大型应用程序  *
+		注意事项：
+			- 1. 类 
+				  class Foo(ModelForm):
+					class Meta:
+						# model = models.Role
+						# fields = "__all__"
+						# fields = ['caption',]
+						# exclude = ['catpion']
+						model = models.UserType
+						fields = "__all__"
+
+						error_messages = {
+							'title':{'required':'名称不能为空','invalid':'格式错误'}
+						}
+						widgets = {
+							'title':wd.TextInput(attrs={'class':'c1'})
+						}
+				
+			- 2. 添加
+			     GET:
+					form = Foo()
+				 POST:
+					form = Foo(data=request.POST)
+					form.is_valid()
+					form.cleaned_data
+					form.erros
+					form.save()
+			- 3. 修改
+				 GET:
+					form = Foo(instance=obj)
+				 
+				 POST:
+					form = Foo(instance=obj,dat=request.POST)
+					...
+					form.save()
+					
+					
+	- 问题列表示例
+		...
+		
+		
+今日作业：
+	1. GitHub 创建组织 
+	2. Form
+	3. ModelForm 
+	4. 问题列表示例： yield
+	5. 问卷：保存按钮 ajax请求
+					
+					
+					
+					
+			
+			
+			
+			
+				
+				
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+	
+	
